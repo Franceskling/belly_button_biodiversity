@@ -42,7 +42,7 @@ function init() {
 };
 
 //sort the bacteria and make a bar chart for top ten bacterial species 
-function buildBarChart(sample) {
+function buildCharts(sample) {
   d3.json("samples.json").then((data) => {
      var bacteriaId= data.samples; 
      var sortedBacteria= bacteriaId.sort((a,b) =>
@@ -74,4 +74,5 @@ var layout = {
   yaxis: { title: ""}
 };
 Plotly.newPlot("bar", data, layout);
-
+  }
+};
