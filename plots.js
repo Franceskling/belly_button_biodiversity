@@ -69,7 +69,7 @@ var trace = {
 };
 var data = [trace];
 var layout = {
-  title: "",
+  title: "Top Ten Bacterial Species",
   xaxis: { title: "" },
   yaxis: { title: ""},
 };
