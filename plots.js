@@ -42,43 +42,43 @@ function init() {
 };
 
 //sort the bacteria and make a bar chart for top ten bacterial species 
-function buildCharts() {
-  d3.json("samples.json").then((data) => {
-     var bacteriaId= data.samples; 
-     var sortedBacteria= bacteriaId.sort((a,b) =>
-     a - b).reverse(); 
+//function buildCharts() {
+  //d3.json("samples.json").then((data) => {
+    // var bacteriaId= data.samples; 
+     //var sortedBacteria= bacteriaId.sort((a,b) =>
+     //a - b).reverse(); 
 
     //select top 10 
-    var topTen = sortedBacteria.slice(0,10);
+   // var topTen = sortedBacteria.slice(0,10);
 
     //create arrays for lable and id 
-var topTenLabel = topTen.map(samples => samples.otu_labels);
-var topTenId = topTen.map(samples => parseInt(samples.otu_ids));
-var topTenValues = topTen.map(samples => samples.sampleValues);
+//var topTenLabel = topTen.map(samples => samples.otu_labels);
+//var topTenId = topTen.map(samples => parseInt(samples.otu_ids));
+//var topTenValues = topTen.map(samples => samples.sampleValues);
 
 //chart 
-var trace = {
-  x: topTenValues,
-  y: topTenId,
-  type: "bar",
-  orientation: "h",
-  text: topTenLabel,
-  marker: {
-    color: 'rgb(142,124,195)'
-  }
-};
-var data = [trace];
-var layout = {
-  title: "Top Ten Bacterial Species",
-  xaxis: { title: "" },
-  yaxis: { title: ""},
-};
-Plotly.newPlot("bar", data, layout);
-  }
-};
+//var trace = {
+  //x: topTenValues,
+  //y: topTenId,
+  //type: "bar",
+  //orientation: "h",
+  //text: topTenLabel,
+  ///marker: {
+    //color: 'rgb(142,124,195)'
+  //}
+//};
+//var data = [trace];
+//var layout = {
+ // title: "Top Ten Bacterial Species",
+  //xaxis: { title: "" },
+  //yaxis: { title: ""},
+//};
+//Plotly.newPlot("bar", data, layout);
+  //}
+//};
 
 
-function buildCharts() {
-  d3.json("samples.json").then((data) => {
-    var d3.select("#bubble");
-    var bacteriaFrequecny = data.samples
+//function buildCharts() {
+  //d3.json("samples.json").then((data) => {
+    //var d3.select("#bubble");
+    //var bacteriaFrequecny = data.samples
