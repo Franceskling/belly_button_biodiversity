@@ -44,7 +44,6 @@ function init() {
 //sort the bacteria and make a bar chart for top ten bacterial species 
 function buildCharts() {
   d3.json("samples.json").then((data) => {
-    var d3.select("#bar");
      var bacteriaId= data.samples; 
      var sortedBacteria= bacteriaId.sort((a,b) =>
      a - b).reverse(); 
